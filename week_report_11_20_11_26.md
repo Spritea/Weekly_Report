@@ -2,7 +2,10 @@
 
 <sub>**Adviser: Prof. Yang Wen  
 Student: Cheng Wensheng  
-Period: 2017.11.20-2017.11.26**</sub>  
+Period: 2017.11.20-2017.11.26**</sub>
+
+## Recap
+
 I mainly put my effort on two things this week. One is ADSP project, which is about Acoustic Echo Cancellation. Another one is the literature survey of image retrieval.
 
 ## Acoustic Echo Cancellation
