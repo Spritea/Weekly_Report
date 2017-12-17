@@ -15,3 +15,8 @@ This week I mainly put my effort on the image retrieval project. I tried sevaral
  * I tried the classic SVM+BoW+knn_search solution. So I use SIFT to extract and describe images of dataset. Then I use kmeans to cluster these descriptors. Then I get these center descriptors as dictionary of BoW. For quary picture, use SIFT to get specified descriptors in BoW to represent the picture. At last, use FLANN-based kdTree to get nearest images of query picture. That's the whole pipeline.
  * The problem is that the query picture is always very small. And there are few keypoints extracted, which means few matches. Besides, objects have too many poses and different scales, rotations. In my test, I cut part of the larger image as query image(*size: about 50\*50*). It turns out this algorithm can't find good matches for the query picture except the original part of query image itself.
  * I plan to try dense-SIFT to get more keypoints. I guess this may improve its performance.
+ <div  align="center">    
+<img src="F:\GitHub\Weekly_Report\image_retrieval.png" alt="retrieval_outcome" align=center />
+</div>
+    <div STYLE="page-break-after: always;"></div>
+ 
