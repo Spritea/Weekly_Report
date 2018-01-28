@@ -12,7 +12,7 @@ This week I mainly put my effort on the project. Motivated by senior Wang Jinwan
 <div  align="center">    
 <img src="Superpixels.png" alt="图片名称" align=center />
 </div>
-</br>
+
 
 <div  align="center">    
 <img src="pseudo.png" alt="图片名称" align=center />
