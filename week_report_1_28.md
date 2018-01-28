@@ -10,11 +10,11 @@ This week I mainly put my effort on the project. Motivated by senior Wang Jinwan
 * Common superpixel algorithms include SLIC(2010), SEEDS(2013), and SLIC has the best comprehensive performance of all. In our project, I mainly use SLIC.
 * Since this is a engineering project, I need to implement it. Relative algorithms are provided in Scikit-image, an image processing python package, as well as OpenCV-Python. However, for SLIC algorithm, only SKImage has specific tutorials, while OpenCV-Python doesn't. With the help of senior Wang,I make it with OpenCV-Python. This is the result of test image with SKImage. 
 <div  align="center">    
-<img src="F:\GitHub\Weekly_Report\Superpixels.png" alt="图片名称" align=center />
+<img src="Superpixels.png" alt="图片名称" align=center />
 </div>
 </br>
 <div  align="center">    
-<img src="F:\GitHub\Weekly_Report\pseudo.png" alt="图片名称" align=center />
+<img src="pseudo.png" alt="图片名称" align=center />
 </div>
 
 ## Classification
