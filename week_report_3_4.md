@@ -14,7 +14,7 @@ Since the 54th research institute project still performs poorly, I mainly put my
 
 </br>
 <div  align="center">    
-<img src="deeplab_v2_dr_sleep.PNG" alt="图片名称" align=center />
+<img src="deeplab_v2_dr_sleep.png" alt="图片名称" align=center />
 </div>
 
 ## Notes
