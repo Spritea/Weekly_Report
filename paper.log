@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  11 MAR 2018 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  18 MAR 2018 13:23
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./paper.tex
-(./paper.tex
+**f:/GitHub/Weekly_Report/paper.tex
+(f:/GitHub/Weekly_Report/paper.tex
 LaTeX2e <2017-04-15>
 Babel <3.17> and hyphenation patterns for 84 language(s) loaded.
 (./IEEEtran.cls
@@ -20,7 +21,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
 (d:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
--- Using 210mm x 297mm (a4) paper.
+-- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen104
 -- This is a 10 point document.
@@ -206,7 +207,12 @@ Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
 e 221.
 \captionlinewidth=\dimen135
 \realcaptionwidth=\dimen136
-) (./paper.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [journal，a4paper].
+
+No file paper.aux.
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -221,7 +227,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
-
 (d:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
@@ -295,36 +300,48 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 ** ATTENTION: \PARstart is deprecated (line 124). Use \IEEEPARstart instead.
-<01Satellite.jpg, id=1, 839.38594pt x 839.38594pt>
-File: 01Satellite.jpg Graphic file (type jpg)
-<use 01Satellite.jpg>
-Package pdftex.def Info: 01Satellite.jpg  used on input line 159.
-(pdftex.def)             Requested size: 252.0pt x 251.99704pt.
-<01Basic.png, id=2, 839.38594pt x 839.38594pt>
-File: 01Basic.png Graphic file (type png)
-<use 01Basic.png>
-Package pdftex.def Info: 01Basic.png  used on input line 173.
-(pdftex.def)             Requested size: 252.0pt x 251.99704pt.
+
+LaTeX Warning: Reference `fig:sat' on page 1 undefined on input line 128.
+
+
+LaTeX Warning: Reference `fig:label' on page 1 undefined on input line 128.
+
+<SAT01-00000.jpg, id=1, 351.3125pt x 351.3125pt>
+File: SAT01-00000.jpg Graphic file (type jpg)
+<use SAT01-00000.jpg>
+Package pdftex.def Info: SAT01-00000.jpg  used on input line 159.
+(pdftex.def)             Requested size: 252.0pt x 252.0067pt.
+<LAB01-00000.png, id=2, 351.3125pt x 351.3125pt>
+File: LAB01-00000.png Graphic file (type png)
+<use LAB01-00000.png>
+Package pdftex.def Info: LAB01-00000.png  used on input line 173.
+(pdftex.def)             Requested size: 252.0pt x 252.0067pt.
 [1{d:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./01Satellite.jpg> <./01Basic.png>] (./paper.aux) ) 
+ <./SAT01-00000.jpg> <./LAB01-00000.png (PNG copy)>] (./paper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  3525 strings out of 492980
- 54589 string characters out of 6136207
- 116858 words of memory out of 5000000
- 7068 multiletter control sequences out of 15000+600000
+ 54677 string characters out of 6136207
+ 116866 words of memory out of 5000000
+ 7069 multiletter control sequences out of 15000+600000
  36655 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,38p,370b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2017/texmf-dis
-t/fonts/enc/dvips/base/8r.enc}<d:/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2017/
-texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2017/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (1 page, 551446 bytes).
+ 41i,5n,38p,392b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/te
+xlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (1 page, 97632 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
