@@ -1,0 +1,113 @@
+\documentclass[]{IEEEtran}
+% some very useful LaTeX packages include:
+%\usepackage{cite}      
+\usepackage{graphicx}   
+\usepackage{subfigure} 
+\usepackage{url}       
+\usepackage{amsmath}    
+\usepackage{caption2}
+% Your document starts here!
+\begin{document}
+
+% Define document title and author
+	\title{Weekly Report}
+	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.3.12- 3.18
+	}
+	\markboth{Visual Information Processing Group}{}
+	\maketitle
+
+% Write abstract here
+\begin{abstract}
+	This week I mainly put my effort on training DeepLab V3 and FC-Densenet model on our dataset.
+\end{abstract}
+
+% Each section begins with a \section{title} command
+\section{DeepLab V3}
+	% \PARstart{}{} creates a tall first letter for this first paragraph
+	\PARstart{D}{eepLab} V3 is a state-of-the-art semantic segmentation model, released by Google. Since DeepLab V2 hasn't achieved a good performance on our dataset, so I turn to V3.
+	\begin{itemize}
+		\item Recently, Google has released official DeepLab series code on GitHub. But it only supports 2 public datasets, PASCAL VOC and CityScapes till now, and doesn't support customer's dataset.
+		\item After searching a lot on GitHub, I found one open source project called \textbf{Semantic Segmentation Suit}e. It implements most fashion models, including \textbf{DeepLab V1-V3+}, \textbf{PSPNet}, \textbf{RefineNet}, \textbf{FC-DenseNet}, etc.
+		\item After training DeepLab V3 model for 100 epochs, I get the result on training set as follows. The ground truth image is Fig.~\ref{fig:dlv3_gt}, the prediction image is Fig.~\ref{fig:dlv3_pr}.
+	\end{itemize}
+
+% Main Part
+\section{FC-DenseNet}
+	% LaTeX takes complete care of your document layout ...
+	DenseNet wins the CVPR 2017 best paper. It improves ResNet significantly. FC-DenseNet combines fully connected net with DenseNet, and get state-of-the-art result. I tried this as well.
+	\begin{itemize}
+		\item The training time of FC-DenseNet is about 2 times as DeepLab V3 based on ResNet, maybe because the former structure is more complicated than the latter.
+		\item After training FC-DenseNet for 100 epochs, I get the following result. The ground truth image is Fig.~\ref{fig:fcd_gt}, the prediction image is Fig.~\ref{fig:fcd_pr}. Better than DeepLab V3.
+		\item Since the author has updated some model files, I'm training them with extended data again to see whether it would be better.
+	\end{itemize}
+\newpage
+\begin{figure}[!hbt]
+%		 Center the figure.
+		\vspace{2.5cm}
+%		\hspace{50cm}
+		\begin{center}
+			\begin{minipage}[t]{0.21\textwidth}
+				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_gt}
+				%		 Create a subtitle for the figure.
+				\caption{Ground truth image DeepLab V3}
+				\label{fig:dlv3_gt}
+			\end{minipage}
+		    \hspace{0.5cm}
+			\begin{minipage}[t]{0.21\textwidth}
+				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_pred}
+				%Create a subtitle for the figure.
+				\caption{Prediction image DeepLab V3}
+				\label{fig:dlv3_pr}
+			\end{minipage}
+		\end{center}
+	\end{figure}
+
+\begin{figure}[!hbt]
+	%		 Center the figure.
+%	\vspace{1.8cm}
+	\begin{center}
+		\vspace{-0.3cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{fc_SAT01-00008_gt}
+			%		 Create a subtitle for the figure.
+			\caption{Ground truth image FCDenseNet}
+			\label{fig:fcd_gt}
+		\end{minipage}
+		\hspace{0.5cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{fc_SAT01-00008_pred}
+			%Create a subtitle for the figure.
+			\caption{Prediction image FCDenseNet}
+			\label{fig:fcd_pr}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
+% Now we need a bibliography:
+%\begin{thebibliography}{5}
+%
+%	%Each item starts with a \bibitem{reference} command and the details thereafter.
+%	\bibitem{HOP96} % Transaction paper
+%	J.~Hagenauer, E.~Offer, and L.~Papke. Iterative decoding of binary block
+%	and convolutional codes. {\em IEEE Trans. Inform. Theory},
+%	vol.~42, no.~2, pp.~429–-445, Mar. 1996.
+%
+%	\bibitem{MJH06} % Conference paper
+%	T.~Mayer, H.~Jenkac, and J.~Hagenauer. Turbo base-station cooperation for intercell interference cancellation. {\em IEEE Int. Conf. Commun. (ICC)}, Istanbul, Turkey, pp.~356--361, June 2006.
+%
+%	\bibitem{Proakis} % Book
+%	J.~G.~Proakis. {\em Digital Communications}. McGraw-Hill Book Co.,
+%	New York, USA, 3rd edition, 1995.
+%
+%	\bibitem{talk} % Web document
+%	F.~R.~Kschischang. Giving a talk: Guidelines for the Preparation and Presentation of Technical Seminars.
+%	\url{http://www.comm.toronto.edu/frank/guide/guide.pdf}.
+%
+%	\bibitem{5}
+%	IEEE Transactions \LaTeX and Microsoft Word Style Files.
+%	\url{http://www.ieee.org/web/publications/authors/transjnl/index.html}
+%
+%\end{thebibliography}
+
+% Your document ends here!
+\end{document}
