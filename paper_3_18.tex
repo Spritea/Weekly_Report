@@ -1,9 +1,8 @@
 \documentclass[]{IEEEtran}
-
 % some very useful LaTeX packages include:
 %\usepackage{cite}      
 \usepackage{graphicx}   
-%\usepackage{subfigure} 
+\usepackage{subfigure} 
 \usepackage{url}       
 \usepackage{amsmath}    
 \usepackage{caption2}
@@ -12,62 +11,77 @@
 
 % Define document title and author
 	\title{Weekly Report}
-	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.3.5- 3.11
+	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.3.12- 3.18
 	}
 	\markboth{Visual Information Processing Group}{}
 	\maketitle
 
 % Write abstract here
 \begin{abstract}
-	This week I mainly put my effort on preparing the data set and training DeepLab V2 model with this.
+	This week I mainly put my effort on training DeepLab V3 and FC-Densenet model on our dataset.
 \end{abstract}
 
 % Each section begins with a \section{title} command
-\section{Data Set}
+\section{DeepLab V3}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-	\PARstart{T}{he} original data set the author used is Pascal VOC 2012. So we need to train it on our data set.
+	\PARstart{D}{eepLab} V3 is a state-of-the-art semantic segmentation model, released by Google. Since DeepLab V2 hasn't achieved a good performance on our dataset, so I turn to V3.
 	\begin{itemize}
-		\item We searched many related papers for proper data set. However, there are no visible spectral remote sensing data set we desired. So I have to build our own data set. 
-		\item We tried Google Maps, and attempted to remove text labels and extract 4 targets, including forest, road, building and river. But for Google Maps, I can't separate \textbf{building} from other objects, since there is only one button to control \textbf{man made}, which contains building and other man-made objects. 
-		\item \textbf{Solution:} Finally, I found one useful website called \textbf{Mapbox}. It fulfills our requirements perfectly, although it limits the number of images downloaded to 5 per account. The satellite image is Fig.~\ref{fig:sat}, the label image is Fig.~\ref{fig:label}.
+		\item Recently, Google has released official DeepLab series code on GitHub. But it only supports 2 public datasets, PASCAL VOC and CityScapes till now, and doesn't support customer's dataset.
+		\item After searching a lot on GitHub, I found one open source project called \textbf{Semantic Segmentation Suit}e. It implements most fashion models, including \textbf{DeepLab V1-V3+}, \textbf{PSPNet}, \textbf{RefineNet}, \textbf{FC-DenseNet}, etc.
+		\item After training DeepLab V3 model for 100 epochs, I get the result on training set as follows. The ground truth image is Fig.~\ref{fig:dlv3_gt}, the prediction image is Fig.~\ref{fig:dlv3_pr}.
 	\end{itemize}
 
 % Main Part
-\section{Training}
+\section{FC-DenseNet}
 	% LaTeX takes complete care of your document layout ...
-	After converting data set to the same format with the original one, we started training the model with our data set. During the procedure, we found that on training set, the accuracy can achieve \textbf{80\%}. But on testing set, it's only about \textbf{60\%}, which is really low. We plan to try following measures to improve performance.
+	DenseNet wins the CVPR 2017 best paper. It improves ResNet significantly. FC-DenseNet combines fully connected net with DenseNet, and get state-of-the-art result. I tried this as well.
 	\begin{itemize}
-		\item \textbf{Extend data set.} We have $1\,000$ images with size of 350$\times$350 at first. I plan to download more images from \textbf{Mapbox} to train another.
-		\item \textbf{Hyperparameters.} Since there is a bunch of parameters, I will try to adjust them to see the result. 
+		\item The training time of FC-DenseNet is about 2 times as DeepLab V3 based on ResNet, maybe because the former structure is more complicated than the latter.
+		\item After training FC-DenseNet for 100 epochs, I get the following result. The ground truth image is Fig.~\ref{fig:fcd_gt}, the prediction image is Fig.~\ref{fig:fcd_pr}. Better than DeepLab V3.
+		\item Since the author has updated some model files, I'm training them with extended data again to see whether it would be better.
 	\end{itemize}
-
-	\begin{figure}[!hbt]
-		% Center the figure.
+\newpage
+\begin{figure}[!hbt]
+%		 Center the figure.
+		\vspace{2.5cm}
+%		\hspace{50cm}
 		\begin{center}
-		% Include the eps file, scale it such that it's width equals the column width. You can also put width=8cm for example...
-%		\includegraphics[width=\columnwidth]{LAB01-00002}
-		\includegraphics[width=\columnwidth]{SAT01-00000}
-		% Create a subtitle for the figure.
-		\caption{Satellite image}
-		% Define the label of the figure. It's good to use 'fig:title', so you know that the label belongs to a figure.
-		\label{fig:sat}
+			\begin{minipage}[t]{0.21\textwidth}
+				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_gt}
+				%		 Create a subtitle for the figure.
+				\caption{Ground truth image DeepLab V3}
+				\label{fig:dlv3_gt}
+			\end{minipage}
+		    \hspace{0.5cm}
+			\begin{minipage}[t]{0.21\textwidth}
+				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_pred}
+				%Create a subtitle for the figure.
+				\caption{Prediction image DeepLab V3}
+				\label{fig:dlv3_pr}
+			\end{minipage}
 		\end{center}
 	\end{figure}
 
-	\begin{figure}[!hbt]
-	% Center the figure.
-	\vspace{-1cm}
-		\begin{center}
-		% Include the eps file, scale it such that it's width equals the column width. You can also put width=8cm for example...
-		%		\includegraphics[width=\columnwidth]{LAB01-00002}
-		\includegraphics[width=\columnwidth]{LAB01-00000}
-		% Create a subtitle for the figure.
-		\caption{Label image}
-		% Define the label of the figure. It's good to use 'fig:title', so you know that the label belongs to a figure.
-		\label{fig:label}
-		\end{center}
-	\end{figure}	
-
+\begin{figure}[!hbt]
+	%		 Center the figure.
+%	\vspace{1.8cm}
+	\begin{center}
+		\vspace{-0.3cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{fc_SAT01-00008_gt}
+			%		 Create a subtitle for the figure.
+			\caption{Ground truth image FCDenseNet}
+			\label{fig:fcd_gt}
+		\end{minipage}
+		\hspace{0.5cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{fc_SAT01-00008_pred}
+			%Create a subtitle for the figure.
+			\caption{Prediction image FCDenseNet}
+			\label{fig:fcd_pr}
+		\end{minipage}
+	\end{center}
+\end{figure}
 
 % Now we need a bibliography:
 %\begin{thebibliography}{5}
