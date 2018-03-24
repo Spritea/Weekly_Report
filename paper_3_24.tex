@@ -11,34 +11,33 @@
 
 % Define document title and author
 	\title{Weekly Report}
-	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.3.12- 3.18
+	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.3.19- 3.24
 	}
 	\markboth{Visual Information Processing Group}{}
 	\maketitle
 
 % Write abstract here
 \begin{abstract}
-	This week I mainly put my effort on training DeepLab V3 and FC-Densenet model on our dataset.
+	This week I mainly put my effort on training PSPNet and RefineNet model on our dataset.
 \end{abstract}
 
 % Each section begins with a \section{title} command
-\section{DeepLab V3}
+\section{Model Training}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-	\PARstart{D}{eepLab} V3 is a state-of-the-art semantic segmentation model, released by Google. Since DeepLab V2 hasn't achieved a good performance on our dataset, so I turn to V3.
+	\PARstart{W}{e} tried most of the state-of-the-art models, including DeepLab V3, DenseNet, PSPNet, RefineNet and GCN model.
 	\begin{itemize}
-		\item Recently, Google has released official DeepLab series code on GitHub. But it only supports 2 public datasets, PASCAL VOC and CityScapes till now, and doesn't support customer's dataset.
-		\item After searching a lot on GitHub, I found one open source project called \textbf{Semantic Segmentation Suit}e. It implements most fashion models, including \textbf{DeepLab V1-V3+}, \textbf{PSPNet}, \textbf{RefineNet}, \textbf{FC-DenseNet}, etc.
-		\item After training DeepLab V3 model for 100 epochs, I get the result on training set as follows. The ground truth image is Fig.~\ref{fig:dlv3_gt}, the prediction image is Fig.~\ref{fig:dlv3_pr}.
+		\item We tried DeepLab V3 and DenseNet last week. However, neither performed well on our dataset. We have no choice but to try more.
+		\item After a long period of training, the result showed these models didn't perform well as I expected. Although they get competitive results on PASCAL VOC dataset, such as \textbf{80$\%$ mIoU}, they only achieve \textbf{50-60$\%$ mIoU} on our dataset in turn.
 	\end{itemize}
 
 % Main Part
-\section{FC-DenseNet}
+\section{Result Analysis}
 	% LaTeX takes complete care of your document layout ...
-	DenseNet wins the CVPR 2017 best paper. It improves ResNet significantly. FC-DenseNet combines fully connected net with DenseNet, and get state-of-the-art result. I tried this as well.
+	We discussed about our result, then raised following reasons for poor accuracy.
 	\begin{itemize}
-		\item The training time of FC-DenseNet is about 2 times as DeepLab V3 based on ResNet, maybe because the former structure is more complicated than the latter.
-		\item After training FC-DenseNet for 100 epochs, I get the following result. The ground truth image is Fig.~\ref{fig:fcd_gt}, the prediction image is Fig.~\ref{fig:fcd_pr}. Better than DeepLab V3.
-		\item Since the author has updated some model files, I'm training them with extended data again to see whether it would be better.
+		\item Obviously, the mere difference is dataset. We checked up them and compared carefully. One major drawback is the fuzzy label of our dataset. For optical remote sensing images, some places are shaded by trees or high buildings. Yet for label images, these regions are labeled as primary class. Therefore, they would pollute the whole dataset and make the model confused.   
+		\item As for our result, the lowest accuracy is of road class. Since the color of road is very close to some roofs, and they are both flat, it's hard for the model to distinguish road from these buildings.  
+		\item The test result of these models in sequences are Fig.~\ref{fig:fcd_gt},  Fig.~\ref{fig:fcd_pr}.
 	\end{itemize}
 \newpage
 \begin{figure}[!hbt]
