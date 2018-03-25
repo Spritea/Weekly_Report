@@ -37,26 +37,26 @@
 	\begin{itemize}
 		\item Obviously, the mere difference is dataset. We checked up them and compared carefully. One major drawback is the fuzzy label of our dataset. For optical remote sensing images, some places are shaded by trees or high buildings. Yet for label images, these regions are labeled as primary class. Therefore, they would pollute the whole dataset and make the model confused.   
 		\item As for our result, the lowest accuracy is of road class. Since the color of road is very close to some roofs, and they are both flat, it's hard for the model to distinguish road from these buildings.  
-		\item The test result of these models in sequences are Fig.~\ref{fig:fcd_gt},  Fig.~\ref{fig:fcd_pr}.
+		\item The test result of these models in sequences are on the right.
 	\end{itemize}
 \newpage
 \begin{figure}[!hbt]
 %		 Center the figure.
-		\vspace{2.5cm}
+		\vspace{0.3cm}
 %		\hspace{50cm}
 		\begin{center}
 			\begin{minipage}[t]{0.21\textwidth}
-				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_gt}
+				\includegraphics[width=\columnwidth]{06Basic}
 				%		 Create a subtitle for the figure.
-				\caption{Ground truth image DeepLab V3}
-				\label{fig:dlv3_gt}
+				\caption{Ground truth image}
+				\label{fig:gt}
 			\end{minipage}
 		    \hspace{0.5cm}
 			\begin{minipage}[t]{0.21\textwidth}
-				\includegraphics[width=\columnwidth]{dl3_SAT01-00008_pred}
+				\includegraphics[width=\columnwidth]{dlv3_out}
 				%Create a subtitle for the figure.
-				\caption{Prediction image DeepLab V3}
-				\label{fig:dlv3_pr}
+				\caption{DeepLab V3 result}
+				\label{fig:dlv3}
 			\end{minipage}
 		\end{center}
 	\end{figure}
@@ -65,19 +65,40 @@
 	%		 Center the figure.
 %	\vspace{1.8cm}
 	\begin{center}
-		\vspace{-0.3cm}
+		\vspace{-0.5cm}
 		\begin{minipage}[t]{0.21\textwidth}
-			\includegraphics[width=\columnwidth]{fc_SAT01-00008_gt}
+			\includegraphics[width=\columnwidth]{psp_out}
 			%		 Create a subtitle for the figure.
-			\caption{Ground truth image FCDenseNet}
-			\label{fig:fcd_gt}
+			\caption{PSPNet result}
+			\label{fig:psp}
 		\end{minipage}
 		\hspace{0.5cm}
 		\begin{minipage}[t]{0.21\textwidth}
-			\includegraphics[width=\columnwidth]{fc_SAT01-00008_pred}
+			\includegraphics[width=\columnwidth]{dense_out}
 			%Create a subtitle for the figure.
-			\caption{Prediction image FCDenseNet}
-			\label{fig:fcd_pr}
+			\caption{DenseNet result}
+			\label{fig:dense}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
+\begin{figure}[!hbt]
+	%		 Center the figure.
+	%	\vspace{1.8cm}
+	\begin{center}
+		\vspace{-0.5cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{gcn_out}
+			%		 Create a subtitle for the figure.
+			\caption{GCN Result}
+			\label{fig:gcn}
+		\end{minipage}
+		\hspace{0.5cm}
+		\begin{minipage}[t]{0.21\textwidth}
+			\includegraphics[width=\columnwidth]{refine_out}
+			%Create a subtitle for the figure.
+			\caption{Refine Net result}
+			\label{fig:refine}
 		\end{minipage}
 	\end{center}
 \end{figure}
