@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  8 APR 2018 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  15 APR 2018 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./paper_4_1.tex
-(./paper_4_1.tex
+**./paper_4_15.tex
+(./paper_4_15.tex
 LaTeX2e <2017-04-15>
 Babel <3.17> and hyphenation patterns for 84 language(s) loaded.
 (./IEEEtran.cls
@@ -230,8 +230,8 @@ Package caption2 Info: subfigure package v2.1 (or newer) detected on input line
  449.
 \subfigcapwidth=\dimen139
 \subcapindent=\dimen140
-) (./paper_4_1.aux)
-\openout1 = `paper_4_1.aux'.
+) (./paper_4_15.aux)
+\openout1 = `paper_4_15.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -245,7 +245,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-
 (d:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
@@ -319,34 +318,46 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 ** ATTENTION: \PARstart is deprecated (line 27). Use \IEEEPARstart instead.
-<full.png, id=1, 908.64468pt x 637.63219pt>
-File: full.png Graphic file (type png)
-<use full.png>
-Package pdftex.def Info: full.png  used on input line 48.
-(pdftex.def)             Requested size: 252.0pt x 176.83313pt.
-<ss.png, id=2, 1927.2pt x 1084.05pt>
-File: ss.png Graphic file (type png)
-<use ss.png>
-Package pdftex.def Info: ss.png  used on input line 53.
-(pdftex.def)             Requested size: 252.0pt x 141.74196pt.
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+<superpixel_dataset.jpg, id=1, 432.6345pt x 222.3945pt>
+File: superpixel_dataset.jpg Graphic file (type jpg)
+<use superpixel_dataset.jpg>
+Package pdftex.def Info: superpixel_dataset.jpg  used on input line 46.
+(pdftex.def)             Requested size: 252.0pt x 129.54202pt.
+<multi-scale_CNN.jpg, id=2, 431.00389pt x 199.8053pt>
+File: multi-scale_CNN.jpg Graphic file (type jpg)
+<use multi-scale_CNN.jpg>
+Package pdftex.def Info: multi-scale_CNN.jpg  used on input line 51.
+(pdftex.def)             Requested size: 252.0pt x 116.82312pt.
 [1{d:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./full.png> <./ss.png>] (./paper_4_1.aux) ) 
+ <./superpixel_dataset.jpg> <./multi-scale_CNN.jpg>] (./paper_4_15.aux) ) 
 Here is how much of TeX's memory you used:
- 3641 strings out of 492980
- 56308 string characters out of 6136207
- 117920 words of memory out of 5000000
+ 3643 strings out of 492980
+ 56458 string characters out of 6136207
+ 116920 words of memory out of 5000000
  7181 multiletter control sequences out of 15000+600000
  35548 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,38p,299b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2017/texmf-dist/fonts/
-enc/dvips/base/8r.enc}<d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/te
-xlive/2017/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2017/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper_4_1.pdf (1 page, 324261 bytes).
+ 41i,5n,38p,496b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/te
+xlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2017/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmbi8a
+.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper_4_15.pdf (1 page, 316309 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream
