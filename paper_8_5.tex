@@ -1,0 +1,64 @@
+\documentclass[]{IEEEtran}
+% some very useful LaTeX packages include:
+%\usepackage{cite}      
+\usepackage{graphicx}   
+\usepackage{subfigure} 
+\usepackage{url}       
+\usepackage{amsmath}    
+\usepackage{caption2}
+% Your document starts here!
+\begin{document}
+
+% Define document title and author
+	\title{Weekly Report}
+	\author{Adviser: Prof. Yang Wen \\Student: Cheng Wensheng\\ Period: 2018.7.29-8.5
+	}
+	\markboth{Visual Information Processing Group}{}
+	\maketitle
+
+% Write abstract here
+\begin{abstract}
+	This week I mainly put my effort on improving the segmentation accuracy of building extraction. 
+\end{abstract}
+
+% Each section begins with a \section{title} command
+\section{Cnn methods}
+	% \PARstart{}{} creates a tall first letter for this first paragraph
+	\PARstart{S}{ince} the result of our first submission is about 57$\%$, which is not ideal. So we need to try more ways to improve the accuracy. Firstly, I tried other deep learning methods. 
+	\begin{itemize}
+		\item The algorithm of our first model is RefineNet, which has the best performance in CETC54 project. 
+		\item PSPNet was proposed by Jiaya Jia, which has a high accuracy regardless of running time. So I tried this, but it didn't behave better than RefineNet, neither did DeepLab V3 nor DeepLab V3 plus.
+		\item The main problem is that we have few training data. We only get 90 images with the size of 512$\times$512, which is seriously adequate for CNN methods. So these CNN models can't learn enough features and can't perform well on testing dataset. 
+		
+		Fig.~\ref{fig:mp} is the ground truth. Fig.~\ref{fig:ss} is the PSPNet result.
+	\end{itemize}
+
+% Main Part
+\section{Traditional methods}
+	% LaTeX takes complete care of your document layout.
+	It has been a long time for scholars to interpret SAR images with traditional methods. So we tried some traditional methods to have a look.
+	\begin{itemize}
+		\item General methods are extracting the L-like structures with strong intensity. They assume that all buildings show this response to SAR.  
+		\item However, for the contest images, not all the buildings look like L shape. So this will inevitably miss some buildings.
+		\item Besides, these traditional papers show little concern of noise. Those SAR images in papers are so clean and only have buildings. Yet we have to deal with these noise, like roads and trees. We still need to do more on the basis.
+	\end{itemize}
+\newpage
+\begin{figure}[!hbt]
+%		 Center the figure.
+		\vspace{0.3cm}
+%		\hspace{50cm}
+		\begin{center}
+			\includegraphics[width=0.9\columnwidth]{gt}
+				%		 Create a subtitle for the figure.
+			\caption{Ground truth}
+			\label{fig:mp}
+		    \vspace{0.2cm}
+			\includegraphics[width=0.9\columnwidth]{pred}
+				%Create a subtitle for the figure.
+			\caption{PSPNet result}
+			\label{fig:ss}
+		\end{center}
+	\end{figure}
+
+% Your document ends here!
+\end{document}
