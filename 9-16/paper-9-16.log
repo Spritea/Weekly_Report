@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  16 SEP 2018 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.30)  16 SEP 2018 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./paper-9-7.tex
-(./paper-9-7.tex
+**./paper-9-16.tex
+(./paper-9-16.tex
 LaTeX2e <2017-04-15>
 Babel <3.17> and hyphenation patterns for 84 language(s) loaded.
 (./IEEEtran.cls
@@ -230,8 +230,8 @@ Package caption2 Info: subfigure package v2.1 (or newer) detected on input line
  449.
 \subfigcapwidth=\dimen139
 \subcapindent=\dimen140
-) (./paper-9-7.aux)
-\openout1 = `paper-9-7.aux'.
+) (./paper-9-16.aux)
+\openout1 = `paper-9-16.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -245,7 +245,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-
 (d:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
@@ -319,36 +318,35 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 ** ATTENTION: \PARstart is deprecated (line 27). Use \IEEEPARstart instead.
-** ATTENTION: \PARstart is deprecated (line 38). Use \IEEEPARstart instead.
 <fw.png, id=1, 1505.625pt x 1505.625pt>
 File: fw.png Graphic file (type png)
 <use fw.png>
-Package pdftex.def Info: fw.png  used on input line 56.
+Package pdftex.def Info: fw.png  used on input line 48.
 (pdftex.def)             Requested size: 176.39923pt x 176.39404pt.
 <rt.png, id=3, 1129.21875pt x 1129.21875pt>
 File: rt.png Graphic file (type png)
 <use rt.png>
-Package pdftex.def Info: rt.png  used on input line 63.
+Package pdftex.def Info: rt.png  used on input line 55.
 (pdftex.def)             Requested size: 176.39923pt x 176.3883pt.
 [1{d:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./fw.png> <./rt.png>] (./paper-9-7.aux) ) 
+ <./fw.png> <./rt.png>] (./paper-9-16.aux) ) 
 Here is how much of TeX's memory you used:
  3642 strings out of 492980
- 56300 string characters out of 6136207
- 117920 words of memory out of 5000000
+ 56309 string characters out of 6136207
+ 116920 words of memory out of 5000000
  7181 multiletter control sequences out of 15000+600000
  35548 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,38p,325b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2017/texmf-dist/fonts/en
-c/dvips/base/8r.enc}<d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2017/t
-exmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2017/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb>
-Output written on paper-9-7.pdf (1 page, 103297 bytes).
+ 41i,5n,38p,323b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2017/texmf-dist/fonts/e
+nc/dvips/base/8r.enc}<d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2017/
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2017/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb>
+Output written on paper-9-16.pdf (1 page, 103138 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
